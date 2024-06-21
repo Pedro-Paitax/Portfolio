@@ -1,11 +1,15 @@
-import { Background } from "./components/background";
+import { MainContainer } from "./components/background";
 import { Header } from "./components/header";
 
 function App() {
   return (
     <>
-      <Header />
-      <Background />
+      <header>
+        <Header />
+      </header>
+      <body>
+        <MainContainer />
+      </body>
     </>
   );
 }
