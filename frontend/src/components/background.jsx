@@ -2,11 +2,11 @@ import { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 
 //const words = ['CSS3', 'HTML5', 'JavaScript', 'React', 'NodeJS', 'Tailwind'];
-const words = [  'CSS3'
-    //{Nome: 'CSS3', Projeto: 'Projeto 1'},
-    //{Nome: 'CSS3', Projeto: 'Projeto 2'},
-    //{Nome: 'HTML5', Projeto: 'Projeto 1'},
-    //{Nome: 'HTML5', Projeto: 'Projeto 2'},
+const words = [
+    {Nome: 'CSS3', Projeto: 'Projeto 1'},
+    {Nome: 'CSS3', Projeto: 'Projeto 2'},
+    {Nome: 'HTML5', Projeto: 'Projeto 1'},
+    {Nome: 'HTML5', Projeto: 'Projeto 2'},
 ]
 
 //Para o pedrinho do futuro
@@ -65,13 +65,13 @@ export function Background() {
 
     return (
         <Background className='bg-neutral-950'>
-            {words.map((word, index) => (
+            {words.map((item, index) => (
                 <Box
                     key={index}
                     className='nerdbox bg-slate-800 px-2 py-2'
                     ref={(el) => (boxRefs.current[index] = el)} // Armazena a referência da box no array
                 >
-                    <button className='text-slate-100 text-xl font-bold'>{word}</button>
+                    <button className='text-slate-100 text-xl font-bold'>{item.Nome}</button>
                 </Box>
             ))}
         </Background>
