@@ -1,9 +1,14 @@
 import { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 //const words = ['CSS3', 'HTML5', 'JavaScript', 'React', 'NodeJS', 'Tailwind'];
 
-export function MainContainer() {
+export function Overview() {
+
+    AOS.init();
+
     const [screenHeight, setScreenHeight] = useState(0);
 
     useEffect(() => {
@@ -23,6 +28,9 @@ export function MainContainer() {
 
     return (
         <Background className='bg-gradient-to-r from-zinc-800 to-slate-900'>
+            <div data-aos="fade-in">
+                <p> OI TESTANDO </p>
+            </div>
 
         </Background>
     );

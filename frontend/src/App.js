@@ -1,4 +1,4 @@
-import { MainContainer } from "./components/background";
+import { Overview } from "./components/overview";
 import { Header } from "./components/header";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
         <Header />
       </header>
       <body>
-        <MainContainer />
+        <Overview />
       </body>
     </>
   );
